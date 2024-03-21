@@ -54,6 +54,8 @@ app.add_url_rule('/', 'api', api.as_view(), methods=['POST'])
 def classify(text):
   return logreg.predict([text])[0]
 
+print('сервер запущен')
+
 #запускаем сервер
 if __name__ == '__main__':
     from waitress import serve
